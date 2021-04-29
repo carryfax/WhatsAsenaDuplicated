@@ -16,7 +16,7 @@ const Lang = Language.getString('webss');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'ss ?(.*)', fromMe: true, desc: Lang.SS_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ss ?(.*)', fromMe: false, desc: Lang.SS_DESC}, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.LİNK);
 
@@ -27,7 +27,7 @@ if (Config.WORKTYPE == 'private') {
     }));
     
     const fc = "Genera rostros humanos que antes no existían con inteligencia artificial."
-    Asena.addCommand({pattern: 'faceai', fromMe: true, desc: fc}, (async (message, match) => {
+    Asena.addCommand({pattern: 'faceai', fromMe: false, desc: fc}, (async (message, match) => {
 
         var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://thispersondoesnotexist.com/&output=image&width=1000&height=1000', { responseType: 'arraybuffer' })
 
@@ -36,7 +36,7 @@ if (Config.WORKTYPE == 'private') {
     }));
 
     const ani = "Genera caras de anime que no existían antes con inteligencia artificial."
-    Asena.addCommand({pattern: 'animai', fromMe: true, desc: ani}, (async (message, match) => {
+    Asena.addCommand({pattern: 'animai', fromMe: false, desc: ani}, (async (message, match) => {
 
         var webimage = await axios.get('https://screenshotapi.net/api/v1/screenshot?url=https://www.thiswaifudoesnotexist.net/&output=image&width=1000&height=1000&retina=true&full_page=false', { responseType: 'arraybuffer' })
 
