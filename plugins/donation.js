@@ -7,7 +7,7 @@ const fs = require('fs');
   
   if (con.WORKTYPE == 'private') {
   
-    Asena.addCommand({pattern: 'donation', fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'donation', fromMe: false}, (async (message, match) => {
       
           var image = await axios.get ('https://i.ibb.co/GvXzJSG/20210406-014153.jpg', {responseType: 'arraybuffer'})
        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.jpg, caption: `*Hola, soy _DarkBox_*\n\n¡Me alegra saber que quieres donar ☺️!\n*DrkBox* es un proyecto nuevo que necesita apoyo\n*Para donaciones internacionales*\nPayPal: paypal.me/DrkBot\n*Para donaciones locales*\nNequi, Movii, DaviPlata: 3508770421\n\n\nDe antemano, *muchas gracias*. ❤️`})
@@ -18,7 +18,7 @@ const fs = require('fs');
   
         }));
 
-     Asena.addCommand({pattern: 'share', fromMe: true}, (async (message, match) => {
+     Asena.addCommand({pattern: 'share', fromMe: false}, (async (message, match) => {
       
           var image = await axios.get ('https://i.ibb.co/GvXzJSG/20210406-014153.jpg', {responseType: 'arraybuffer'})
        await message.client.sendMessage (message.jid, Buffer.from (image.data), MessageType.image, {mimetype: Mimetype.jpg, caption: `*Hola, soy _DarkBox_*\n\n¡Te invito a que te unas a este BOT, con el cual podras descargar música, videos, fondos de pantalla, crear sticker y muchas cosas más y lo mejor todo esto sin salir de WhatSapp. 🤩\n\n*Numero del BOT*: Solo entra y envía el primer mensaje que sale para que te muestre el menu de opciones\nhttp://wa.me/573046793853?text=!alive`})
