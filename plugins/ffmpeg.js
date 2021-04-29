@@ -16,7 +16,7 @@ const Lang = Language.getString('ffmpeg');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: false, desc: Lang.FF_DESC}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,'Para ejecutar el comando necesito un video y el nombre del filtro\nℹ️ Ejemplo: ```!ffmpeg fade=in:0:30```\nℹ️ Ejemplo 2: ```!ffmpeg curves=vintage, fps=fps=25```', MessageType.text);
         if (message.reply_message.video) {
