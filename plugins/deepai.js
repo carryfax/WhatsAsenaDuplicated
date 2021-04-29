@@ -16,13 +16,13 @@ const Lang = Language.getString('deepai'); // Language Support
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'deepai', fromMe: true, deleteCommand: true, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'deepai', fromMe: false, deleteCommand: true, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
 
         await message.sendMessage('💻 Uso: *!colorai*\nℹ️ Descripción: Colorea la foto que esté en blanco y negro.\n\n💻 Uso: *!dreamai*\nℹ️ Descripción: Aplica efecto de ensueño a la foto.\n\n💻 Uso: *!toonai*\nℹ️ Descripción: Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n💻 Uso: *!nudity*\nℹ️ Descripción: Detecta la probabilidad de que una imagen contenga desnudez y deba considerarse NSFW.\n\n💻 Uso: *!ganstyle*\nℹ️ Descripción: Coloca un filtro a la foto respondida.\n\n💻 Uso: *!neuraltalkai*\nℹ️ Descripción: Trata de explica lo que está pasando en la foto con Inteligencia Artificial (Modo BETA).\n\n💻 Uso: *!textai <texto>*\nℹ️ Descripción: Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n Ejemplo: !textai hot\n\nSi quieres traducirlo puedes hacerlo con el comando !trt en es respondiendo al texto.\n\n⚠️ *Todas las herramientas aquí funcionan con aprendizaje profundo. Cuanto más lo use, funcionará mejor ya que más información almacenará. (Inteligencia Artificial)* ```de preferencia utiliza solo caracteres en inglés.```\n\n*Gracias por usar DrkBot ❤*');
 
     }));
 
-    Asena.addCommand({pattern: 'colorai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'colorai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Colorizando... 🎨',MessageType.text);
@@ -52,7 +52,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({pattern: 'nudity', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'nudity', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Buscando partes desnudas... 🔞',MessageType.text);
@@ -82,7 +82,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'waifuai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'waifuai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Mezclando... 🧩',MessageType.text);
@@ -112,7 +112,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'superai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'superai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Mejorando... 🖌️',MessageType.text);
@@ -142,7 +142,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
         var resp = await deepai.callStandardApi("sentiment-analysis", {
@@ -154,7 +154,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'dreamai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'dreamai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Noche estrellada... 🌃',MessageType.text);
@@ -184,7 +184,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'neuraltalkai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'neuraltalkai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Leyendo... 🙇🏻',MessageType.text);
@@ -212,7 +212,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
         var resp = await deepai.callStandardApi("text2img", {
@@ -226,7 +226,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'toonai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'toonai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Caricaturizando... 🌟',MessageType.text);
@@ -256,7 +256,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'textai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'textai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
         var resp = await deepai.callStandardApi("text-generator", {
@@ -268,7 +268,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'ganstyle', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'ganstyle', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Creando... ♻️',MessageType.text);
