@@ -16,11 +16,11 @@ const Lang = Language.getString('conventer');
 
 if (Config.WORKTYPE == 'private') {
     
-    Asena.addCommand({pattern: 'infotblend', fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'infotblend', fromMe: false}, (async (message, match) => {
 		await message.sendMessage('*LISTA DE COMANDOS*\n\n➡️ !tblend dodge - Aplica un filtro de color rosa al video.\n➡️ !tblend multiply - Aplica un filtro de color verde al video.\n➡️ !tblend grainmerge - Aumenta los valores de contraste del video.\n➡️ !tblend and - Aplica efecto de rayo negro según la velocidad del video.\n➡️ !tblend or - Aplica un efecto de rayo blanco según la velocidad del video.\n➡️ !tblend burn - Aplica contraste verde al video.\n➡️ !tblend difference - Muestra las diferencias aplicando relieve verde al video.\n➡️ !tblend grainextract - Muestra las diferencias aplicando un relieve gris al video.\n➡️ !tblend divide - Demuestra las diferencias aplicando un relieve rosa al video.\n➡️ !tblend xor - Aplica tanto relieve verde como efecto relámpago al vídeo.\n➡️ !tblend hardmix - Mezcla los colores del video en un tono amarillo y rojo.\n➡️ !tblend negation - Convierte la dinámica del video en rosa.');
 	}));
 
-    Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: true, desc: Lang.T_DESC}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: false, desc: Lang.T_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 
