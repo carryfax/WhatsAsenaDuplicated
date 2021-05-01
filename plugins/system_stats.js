@@ -30,7 +30,7 @@ if (Config.WORKTYPE == 'private') {
     }));
     
     Asena.addCommand({pattern: 'upgrade', fromMe: true}, (async (message, match) => {
-        await message.sendMessage('┏━━━━━━━━━━\n┃〘 ☢️ *𝐃𝐫𝐤𝐁𝐨𝐭* ☢️ 〙\n┣━━━━━━━━━━\n┠ NUEVA ACTUALIZACIÓN┠⊷️ *Version:*  ```'+Config.VERSION+'```\n┗━━━━━━━━━━━━');
+        await message.sendMessage('┏━━━━━━━━━━\n┃〘 ☢️ *𝐃𝐫𝐤𝐁𝐨𝐭* ☢️ 〙\n┣━━━━━━━━━━\n┠ NUEVA ACTUALIZACIÓN\n┠⊷️ *Version:*  ```'+Config.VERSION+'```\n┗━━━━━━━━━━━━');
     }));
 
     Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
