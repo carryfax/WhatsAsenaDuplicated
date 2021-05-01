@@ -5,6 +5,10 @@ const con = require('../config');
 
 if (con.WORKTYPE == 'public') {
     
+    Asena.addCommand({pattern: "infocovid", fromMe: false}, (async (message,match) => {     
+        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *COVID19 ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊* 〙\n┗━━━━━━━━━━━━━━━━━━━\nDatos actualizados de coronavirus.\n┠⊷️ ➡️ !covid\n  Datos de Covid19 en el mundo\n\n┠⊷️ ➡️ !covid arg\n  🇦🇷 Datos de Covid19 en Argentina\n\n┠⊷️ ➡️ !covid bo\n  🇧🇴 Datos de Covid19 en Bolivia\n\n┠⊷️ ➡️ !covid usa\n  🇺🇸 Datos de Covid19 en Estados Unidos\n\n┠⊷️ ➡️ !covid br\n  🇧🇷 Datos de Covid19 en Brasil\n\n┠⊷️ ➡️ !covid cl\n  🇨🇱 Datos de Covid19 en Chile\n\n┠⊷️ ➡️ !covid co\n  🇨🇴 Datos de Covid19 en Colombia\n\n┠⊷️ ➡️ !covid cr\n  🇨🇷 Datos de Covid19 en Costa Rica\n\n┠⊷️ ➡️ !covid cu\n  🇨🇺 Datos de Covid19 en Cuba\n\n┠⊷️ ➡️ !covid ec\n  🇪🇨 Datos de Covid19 en Ecuador\n\n┠⊷️ ➡️ !covid sv\n  🇸🇻 Datos de Covid19 en El Salvador\n\n┠⊷️ ➡️ !covid gt\n  🇬🇹 Datos de Covid19 en Guatemala\n\n┠⊷️ ➡️ !covid hn\n  🇭🇳 Datos de Covid19 en Honduras\n\n┠⊷️ ➡️ !covid mx\n  🇲🇽 Datos de Covid19 en México\n\n┠⊷️ ➡️ !covid ni\n  🇳🇮 Datos de Covid19 en Nicaragua\n\n┠⊷️ ➡️ !covid pa\n  🇵🇦 Datos de Covid19 en Panamá\n\n┠⊷️ ➡️ !covid py\n  🇵🇾 Datos de Covid19 en Paraguay\n\n┠⊷️ ➡️ !covid pe\n  🇵🇪 Datos de Covid19 en Perú\n\n┠⊷️ ➡️ !covid do\n  🇩🇴 Datos de Covid19 en República Dominicana\n\n┠⊷️ ➡️ !covid uy\n  🇺🇾 Datos de Covid19 en Uruguay\n\n┠⊷️ ➡️ !covid ve\n  🇻🇪 Datos de Covid19 en Venezuela\n\n┠⊷️ ➡️ !covid es\n  🇪🇸 Datos de Covid19 en España\n┏━━━━━━━━━━━━━━━━━━━\n  *𝕯𝖗𝖐𝕭𝖔𝖙* tu BOT amigo 😉\n┗━━━━━━━━━━━━━━━━━━━\n');    
+    }));
+    
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: false}, (async (message, match) => {
     if (match[1] === "") {
         try{
@@ -269,16 +273,15 @@ if (con.WORKTYPE == 'public') {
         }
     }  
 }));
-
-Asena.addCommand({pattern: "infocovid", fromMe: false}, (async (message,match) => {
-     
-    await message.sendMessage("_Datos actualizados de coronavirus._\n💻Uso: *!covid*\nℹ️Descripción: Datos de Covid19 en el mundo\n\n💻Uso: *!covid arg*\n🇦🇷\nℹ️Descripción: Datos de Covid19 en Argentina\n\n💻Uso: *!covid bo*\n🇧🇴\nℹ️Descripción: Datos de Covid19 en Bolivia\n\n💻Uso: *!covid usa*\n🇺🇸\nℹ️Descripción: Datos de Covid19 en Estados Unidos\n\n💻Uso: *!covid br*\n🇧🇷\nℹ️Descripción: Datos de Covid19 en Brasil\n\n💻Uso: *!covid cl*\n🇨🇱\nℹ️Descripción: Datos de Covid19 en Chile\n\n💻Uso: *!covid co*\n🇨🇴\nℹ️Descripción: Datos de Covid19 en Colombia\n\n💻Uso: *!covid cr*\n🇨🇷\nℹ️Descripción: Datos de Covid19 en Costa Rica\n\n💻Uso: *!covid cu*\n🇨🇺\nℹ️Descripción: Datos de Covid19 en Cuba\n\n💻Uso: *!covid ec*\n🇪🇨\nℹ️Descripción: Datos de Covid19 en Ecuador\n\n💻Uso: *!covid sv*\n🇸🇻\nℹ️Descripción: Datos de Covid19 en El Salvador\n\n💻Uso: *!covid gt*\n🇬🇹\nℹ️Descripción: Datos de Covid19 en Guatemala\n\n💻Uso: *!covid hn*\n🇭🇳\nℹ️Descripción: Datos de Covid19 en Honduras\n\n💻Uso: *!covid mx*\n🇲🇽\nℹ️Descripción: Datos de Covid19 en México\n\n💻Uso: *!covid ni*\n🇳🇮\nℹ️Descripción: Datos de Covid19 en Nicaragua\n\n💻Uso: *!covid pa*\n🇵🇦\nℹ️Descripción: Datos de Covid19 en Panamá\n\n💻Uso: *!covid py*\n🇵🇾\nℹ️Descripción: Datos de Covid19 en Paraguay\n\n💻Uso: *!covid pe*\n🇵🇪\nℹ️Descripción: Datos de Covid19 en Perú\n\n💻Uso: *!covid do*\n🇩🇴\nℹ️Descripción: Datos de Covid19 en República Dominicana\n\n💻Uso: *!covid uy*\n🇺🇾\nℹ️Descripción: Datos de Covid19 en Uruguay\n\n💻Uso: *!covid ve*\n🇻🇪\nℹ️Descripción: Datos de Covid19 en Venezuela\n\n💻Uso: *!covid es*\n🇪🇸\nℹ️Descripción: Datos de Covid19 en España");
-    
-    }));
 }
 
 else if (con.WORKTYPE == 'private') {
-    Asena.addCommand({pattern: "covid ?(.*)", fromMe: false}, (async (message, match) => {
+    
+    Asena.addCommand({pattern: "infocovid", fromMe: true}, (async (message,match) => {     
+        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *COVID19 ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊* 〙\n┗━━━━━━━━━━━━━━━━━━━\nDatos actualizados de coronavirus.\n┠⊷️ ➡️ !covid\n  Datos de Covid19 en el mundo\n\n┠⊷️ ➡️ !covid arg\n  🇦🇷 Datos de Covid19 en Argentina\n\n┠⊷️ ➡️ !covid bo\n  🇧🇴 Datos de Covid19 en Bolivia\n\n┠⊷️ ➡️ !covid usa\n  🇺🇸 Datos de Covid19 en Estados Unidos\n\n┠⊷️ ➡️ !covid br\n  🇧🇷 Datos de Covid19 en Brasil\n\n┠⊷️ ➡️ !covid cl\n  🇨🇱 Datos de Covid19 en Chile\n\n┠⊷️ ➡️ !covid co\n  🇨🇴 Datos de Covid19 en Colombia\n\n┠⊷️ ➡️ !covid cr\n  🇨🇷 Datos de Covid19 en Costa Rica\n\n┠⊷️ ➡️ !covid cu\n  🇨🇺 Datos de Covid19 en Cuba\n\n┠⊷️ ➡️ !covid ec\n  🇪🇨 Datos de Covid19 en Ecuador\n\n┠⊷️ ➡️ !covid sv\n  🇸🇻 Datos de Covid19 en El Salvador\n\n┠⊷️ ➡️ !covid gt\n  🇬🇹 Datos de Covid19 en Guatemala\n\n┠⊷️ ➡️ !covid hn\n  🇭🇳 Datos de Covid19 en Honduras\n\n┠⊷️ ➡️ !covid mx\n  🇲🇽 Datos de Covid19 en México\n\n┠⊷️ ➡️ !covid ni\n  🇳🇮 Datos de Covid19 en Nicaragua\n\n┠⊷️ ➡️ !covid pa\n  🇵🇦 Datos de Covid19 en Panamá\n\n┠⊷️ ➡️ !covid py\n  🇵🇾 Datos de Covid19 en Paraguay\n\n┠⊷️ ➡️ !covid pe\n  🇵🇪 Datos de Covid19 en Perú\n\n┠⊷️ ➡️ !covid do\n  🇩🇴 Datos de Covid19 en República Dominicana\n\n┠⊷️ ➡️ !covid uy\n  🇺🇾 Datos de Covid19 en Uruguay\n\n┠⊷️ ➡️ !covid ve\n  🇻🇪 Datos de Covid19 en Venezuela\n\n┠⊷️ ➡️ !covid es\n  🇪🇸 Datos de Covid19 en España\n┏━━━━━━━━━━━━━━━━━━━\n  *𝕯𝖗𝖐𝕭𝖔𝖙* tu BOT amigo 😉\n┗━━━━━━━━━━━━━━━━━━━\n');    
+    }));
+    
+    Asena.addCommand({pattern: "covid ?(.*)", fromMe: true}, (async (message, match) => {
     if (match[1] === "") {
         try{
             //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
@@ -542,10 +545,4 @@ else if (con.WORKTYPE == 'private') {
         }
     }  
 }));
-
-Asena.addCommand({pattern: "infocovid", fromMe: false}, (async (message,match) => {
-     
-    await message.sendMessage("_Datos actualizados de coronavirus._\n💻Uso: *!covid*\nℹ️Descripción: Datos de Covid19 en el mundo\n\n💻Uso: *!covid arg*\n🇦🇷\nℹ️Descripción: Datos de Covid19 en Argentina\n\n💻Uso: *!covid bo*\n🇧🇴\nℹ️Descripción: Datos de Covid19 en Bolivia\n\n💻Uso: *!covid usa*\n🇺🇸\nℹ️Descripción: Datos de Covid19 en Estados Unidos\n\n💻Uso: *!covid br*\n🇧🇷\nℹ️Descripción: Datos de Covid19 en Brasil\n\n💻Uso: *!covid cl*\n🇨🇱\nℹ️Descripción: Datos de Covid19 en Chile\n\n💻Uso: *!covid co*\n🇨🇴\nℹ️Descripción: Datos de Covid19 en Colombia\n\n💻Uso: *!covid cr*\n🇨🇷\nℹ️Descripción: Datos de Covid19 en Costa Rica\n\n💻Uso: *!covid cu*\n🇨🇺\nℹ️Descripción: Datos de Covid19 en Cuba\n\n💻Uso: *!covid ec*\n🇪🇨\nℹ️Descripción: Datos de Covid19 en Ecuador\n\n💻Uso: *!covid sv*\n🇸🇻\nℹ️Descripción: Datos de Covid19 en El Salvador\n\n💻Uso: *!covid gt*\n🇬🇹\nℹ️Descripción: Datos de Covid19 en Guatemala\n\n💻Uso: *!covid hn*\n🇭🇳\nℹ️Descripción: Datos de Covid19 en Honduras\n\n💻Uso: *!covid mx*\n🇲🇽\nℹ️Descripción: Datos de Covid19 en México\n\n💻Uso: *!covid ni*\n🇳🇮\nℹ️Descripción: Datos de Covid19 en Nicaragua\n\n💻Uso: *!covid pa*\n🇵🇦\nℹ️Descripción: Datos de Covid19 en Panamá\n\n💻Uso: *!covid py*\n🇵🇾\nℹ️Descripción: Datos de Covid19 en Paraguay\n\n💻Uso: *!covid pe*\n🇵🇪\nℹ️Descripción: Datos de Covid19 en Perú\n\n💻Uso: *!covid do*\n🇩🇴\nℹ️Descripción: Datos de Covid19 en República Dominicana\n\n💻Uso: *!covid uy*\n🇺🇾\nℹ️Descripción: Datos de Covid19 en Uruguay\n\n💻Uso: *!covid ve*\n🇻🇪\nℹ️Descripción: Datos de Covid19 en Venezuela\n\n💻Uso: *!covid es*\n🇪🇸\nℹ️Descripción: Datos de Covid19 en España");
-    
-    }));
 }
