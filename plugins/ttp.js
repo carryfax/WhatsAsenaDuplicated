@@ -17,8 +17,12 @@ const NM = "Muestra una pancarta de anime."
 
 
 if (Config.WORKTYPE == 'private') {
+	
+    Asena.addCommand({pattern: 'infottp', fromMe: true }, (async (message, match) => {    
+        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *TTP ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ !ttp\n  Escribe el texto en una imágen.\n\n┠⊷️ ➡️ !attp\n  Escribe el texto en un sticker de colores.\n\n┠⊷️ ➡️ !animettp\n  Escribe el texto sobre una imágen de anime.\n\n┠⊷️ ➡️ !skelettp\n  Escribe el texto con eskeletos.\n\n┠⊷️ ➡️ !neonttp\n  Escribe el texto sobre una imágen de neón.\n\n┠⊷️ ➡️ !leafttp\n  Escribe el texto sobre una imágen de tréboles.\n\n┠⊷️ ➡️ !harryttp\n  Escribe el texto de una sobre el logo de Harry Potter.\n\n┠⊷️ ➡️ !metalttp\n  Escribe el texto sobre una imágen de metal.\n\n┠⊷️ ➡️ !glowttp\n  Escribe el texto de neón\n\n┠⊷️ ➡️ !paperttp\n  Escribe el texto sobre un papel.\n\n┠⊷️ ➡️ !candlettp\n  Escribe el texto sobre una taza de dulces.\n\n┠⊷️ ➡️ !lovettp\n  Escribe el texto sobre un corazón.\n\n┠⊷️ ➡️ !flowerttp\n  Escribe el texto sobre una taza de flores.\n\n┠⊷️ ➡️ !glassttp\n  Escribe el texto sobre un lienzo.\n\n┠⊷️ ➡️ !coffeettp\n  Escribe el texto sobre una taza de café.\n\n┠⊷️ ➡️ !coffeecupttp\n  Escribe el texto sobre una taza de café.\n\n┠⊷️ ➡️ !candyttp\n  Escribe un texto de dulces.\n\n┠⊷️ ➡️ !sandttp\n  Escribe el texto sobre arena.\n\n┠⊷️ ➡️ !skyttp\n  Escribe el texto sobre el cielo.\n\n┠⊷️ ➡️ !snowttp\n  Escribe el texto sobre la nieve.\n\n┠⊷️ ➡️ !textttp\n  Escribe el texto sobre el cielo.\n\n┠⊷️ ➡️ !smokettp\n  Escribe el texto sobre el humo.\n\n┠⊷️ ➡️ !silverttp\n  Escribe el texto sobre plata.\n\n┏━━━━━━━━━━━━━━━━━━━\n  *𝕯𝖗𝖐𝕭𝖔𝖙* tu BOT amigo 😉\n┗━━━━━━━━━━━━━━━━━━━\n');        
+    }));
 
-    Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: true, desc: Lang.TTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -28,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: false, desc: Lang.ATTP_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, desc: Lang.ATTP_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -39,7 +43,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'glowttp ?(.*)', fromMe: false, desc: Lang.GLOW_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'glowttp ?(.*)', fromMe: true, desc: Lang.GLOW_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -49,7 +53,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'animettp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'animettp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -59,7 +63,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'skelettp ?(.*)$', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'skelettp ?(.*)$', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -69,7 +73,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 	
-    Asena.addCommand({ pattern: 'crossfttp ?(.*)', fromMe: false, desc: Lang.GLOW_DESC }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'crossfttp ?(.*)', fromMe: true, desc: Lang.GLOW_DESC }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -79,7 +83,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'neonttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'neonttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -89,7 +93,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'avengersttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'avengersttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -110,7 +114,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 	
-    Asena.addCommand({ pattern: 'videttp ?(.*)', fromMe: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'videttp ?(.*)', fromMe: false }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -131,7 +135,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'leafttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'leafttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -141,7 +145,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'harryttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'harryttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -151,7 +155,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'metalttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'metalttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -161,7 +165,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'paperttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'paperttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -171,7 +175,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'candlettp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'candlettp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -181,7 +185,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'lovettp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'lovettp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -191,7 +195,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'flowerttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'flowerttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -201,7 +205,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'glassttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'glassttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -211,7 +215,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'coffeettp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'coffeettp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -221,7 +225,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'coffeecupttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'coffeecupttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -231,7 +235,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'candyttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'candyttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -241,7 +245,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'sandttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'sandttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -251,7 +255,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'skyttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'skyttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -261,7 +265,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'snowttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'snowttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -271,7 +275,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'textttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'textttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -281,7 +285,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({ pattern: 'silverttp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'silverttp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -291,7 +295,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({ pattern: 'smokettp ?(.*)', fromMe: false }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'smokettp ?(.*)', fromMe: true }, (async (message, match) => {
 
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
 
@@ -299,16 +303,13 @@ if (Config.WORKTYPE == 'private') {
 
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*' })
 
-	}));
-    
-    Asena.addCommand({pattern: 'infottp', fromMe: false }, (async (message, match) => {
-    
-        await message.sendMessage('💻Uso: *!ttp*\nℹ️Descripción: Escribe el texto en una imágen.\n\n💻Uso: *!attp*\nℹ️Descripción: Escribe el texto en un sticker de colores.\n\n💻Uso: *!animettp*\nℹ️Descripción: Escribe el texto sobre una imágen de anime.\n\n💻Uso: *!skelettp*\nℹ️Descripción: Escribe el texto con eskeletos.\n\n💻Uso: *!neonttp*\nℹ️Descripción: Escribe el texto sobre una imágen de neón.\n\n💻Uso: *!leafttp*\nℹ️Descripción: Escribe el texto sobre una imágen de tréboles.\n\n💻Uso: *!harryttp*\nℹ️Descripción: Escribe el texto de una sobre el logo de Harry Potter.\n\n💻Uso: *!metalttp*\nℹ️Descripción: Escribe el texto sobre una imágen de metal.\n\n💻Uso: *!glowttp*\nℹ️Descripción: Escribe el texto de neón\n\n💻Uso: *!paperttp*\nℹ️Descripción: Escribe el texto sobre un papel.\n\n💻Uso: *!candlettp*\nℹ️Descripción: Escribe el texto sobre una taza de dulces.\n\n💻Uso: *!lovettp*\nℹ️Descripción: Escribe el texto sobre un corazón.\n\n💻Uso: *!flowerttp*\nℹ️Descripción: Escribe el texto sobre una taza de flores.\n\n💻Uso: *!glassttp*\nℹ️Descripción: Escribe el texto sobre un lienzo.\n\n💻Uso: *!coffeettp*\nℹ️Descripción: Escribe el texto sobre una taza de café.\n\n💻Uso: *!coffeecupttp*\nℹ️Descripción: Escribe el texto sobre una taza de café.\n\n💻Uso: *!candyttp*\nℹ️Descripción: Escribe un texto de dulces.\n\n💻Uso: *!sandttp*\nℹ️Descripción: Escribe el texto sobre arena.\n\n💻Uso: *!skyttp*\nℹ️Descripción: Escribe el texto sobre el cielo.\n\n💻Uso: *!snowttp*\nℹ️Descripción: Escribe el texto sobre la nieve.\n\n💻Uso: *!textttp*\nℹ️Descripción: Escribe el texto sobre el cielo.\n\n💻Uso: *!smokettp*\nℹ️Descripción: Escribe el texto sobre el humo.\n\n💻Uso: *!silverttp*\nℹ️Descripción: Escribe el texto sobre plata.\n\n');
-        
-    }));
-    
+	}));    
 }
 else if (Config.WORKTYPE == 'public') {
+	
+    Asena.addCommand({pattern: 'infottp', fromMe: false }, (async (message, match) => {    
+        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *TTP ℂ𝕆𝕄𝔸ℕ𝔻𝕆𝕊* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ !ttp\n  Escribe el texto en una imágen.\n\n┠⊷️ ➡️ !attp\n  Escribe el texto en un sticker de colores.\n\n┠⊷️ ➡️ !animettp\n  Escribe el texto sobre una imágen de anime.\n\n┠⊷️ ➡️ !skelettp\n  Escribe el texto con eskeletos.\n\n┠⊷️ ➡️ !neonttp\n  Escribe el texto sobre una imágen de neón.\n\n┠⊷️ ➡️ !leafttp\n  Escribe el texto sobre una imágen de tréboles.\n\n┠⊷️ ➡️ !harryttp\n  Escribe el texto de una sobre el logo de Harry Potter.\n\n┠⊷️ ➡️ !metalttp\n  Escribe el texto sobre una imágen de metal.\n\n┠⊷️ ➡️ !glowttp\n  Escribe el texto de neón\n\n┠⊷️ ➡️ !paperttp\n  Escribe el texto sobre un papel.\n\n┠⊷️ ➡️ !candlettp\n  Escribe el texto sobre una taza de dulces.\n\n┠⊷️ ➡️ !lovettp\n  Escribe el texto sobre un corazón.\n\n┠⊷️ ➡️ !flowerttp\n  Escribe el texto sobre una taza de flores.\n\n┠⊷️ ➡️ !glassttp\n  Escribe el texto sobre un lienzo.\n\n┠⊷️ ➡️ !coffeettp\n  Escribe el texto sobre una taza de café.\n\n┠⊷️ ➡️ !coffeecupttp\n  Escribe el texto sobre una taza de café.\n\n┠⊷️ ➡️ !candyttp\n  Escribe un texto de dulces.\n\n┠⊷️ ➡️ !sandttp\n  Escribe el texto sobre arena.\n\n┠⊷️ ➡️ !skyttp\n  Escribe el texto sobre el cielo.\n\n┠⊷️ ➡️ !snowttp\n  Escribe el texto sobre la nieve.\n\n┠⊷️ ➡️ !textttp\n  Escribe el texto sobre el cielo.\n\n┠⊷️ ➡️ !smokettp\n  Escribe el texto sobre el humo.\n\n┠⊷️ ➡️ !silverttp\n  Escribe el texto sobre plata.\n\n┏━━━━━━━━━━━━━━━━━━━\n  *𝕯𝖗𝖐𝕭𝖔𝖙* tu BOT amigo 😉\n┗━━━━━━━━━━━━━━━━━━━\n');        
+    }));
 
     Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
 
@@ -592,14 +593,4 @@ else if (Config.WORKTYPE == 'public') {
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*' })
 
 	}));
-    
-    Asena.addCommand({pattern: 'infottp', fromMe: false }, (async (message, match) => {
-    
-        await message.sendMessage('💻Uso: *!ttp*\nℹ️Descripción: Escribe el texto en una imágen.\n\n💻Uso: *!attp*\nℹ️Descripción: Escribe el texto en un sticker de colores.\n\n💻Uso: *!animettp*\nℹ️Descripción: Escribe el texto sobre una imágen de anime.\n\n💻Uso: *!skelettp*\nℹ️Descripción: Escribe el texto con eskeletos.\n\n💻Uso: *!neonttp*\nℹ️Descripción: Escribe el texto sobre una imágen de neón.\n\n💻Uso: *!leafttp*\nℹ️Descripción: Escribe el texto sobre una imágen de tréboles.\n\n💻Uso: *!harryttp*\nℹ️Descripción: Escribe el texto de una sobre el logo de Harry Potter.\n\n💻Uso: *!metalttp*\nℹ️Descripción: Escribe el texto sobre una imágen de metal.\n\n💻Uso: *!glowttp*\nℹ️Descripción: Escribe el texto de neón\n\n💻Uso: *!paperttp*\nℹ️Descripción: Escribe el texto sobre un papel.\n\n💻Uso: *!candlettp*\nℹ️Descripción: Escribe el texto sobre una taza de dulces.\n\n💻Uso: *!lovettp*\nℹ️Descripción: Escribe el texto sobre un corazón.\n\n💻Uso: *!flowerttp*\nℹ️Descripción: Escribe el texto sobre una taza de flores.\n\n💻Uso: *!glassttp*\nℹ️Descripción: Escribe el texto sobre un lienzo.\n\n💻Uso: *!coffeettp*\nℹ️Descripción: Escribe el texto sobre una taza de café.\n\n💻Uso: *!coffeecupttp*\nℹ️Descripción: Escribe el texto sobre una taza de café.\n\n💻Uso: *!candyttp*\nℹ️Descripción: Escribe un texto de dulces.\n\n💻Uso: *!sandttp*\nℹ️Descripción: Escribe el texto sobre arena.\n\n💻Uso: *!skyttp*\nℹ️Descripción: Escribe el texto sobre el cielo.\n\n💻Uso: *!snowttp*\nℹ️Descripción: Escribe el texto sobre la nieve.\n\n💻Uso: *!textttp*\nℹ️Descripción: Escribe el texto sobre el cielo.\n\n💻Uso: *!smokettp*\nℹ️Descripción: Escribe el texto sobre el humo.\n\n💻Uso: *!silverttp*\nℹ️Descripción: Escribe el texto sobre plata.\n\n');
-    }));
-    
-    Asena.addCommand({pattern: 'infottp', fromMe: true }, (async (message, match) => {
-    
-        await message.sendMessage('💻Uso: *!ttp*\nℹ️Descripción: Escribe el texto en una imágen.\n\n💻Uso: *!attp*\nℹ️Descripción: Escribe el texto en un sticker de colores.\n\n💻Uso: *!animettp*\nℹ️Descripción: Escribe el texto sobre una imágen de anime.\n\n💻Uso: *!skelettp*\nℹ️Descripción: Escribe el texto con eskeletos.\n\n💻Uso: *!neonttp*\nℹ️Descripción: Escribe el texto sobre una imágen de neón.\n\n💻Uso: *!leafttp*\nℹ️Descripción: Escribe el texto sobre una imágen de tréboles.\n\n💻Uso: *!harryttp*\nℹ️Descripción: Escribe el texto de una sobre el logo de Harry Potter.\n\n💻Uso: *!metalttp*\nℹ️Descripción: Escribe el texto sobre una imágen de metal.\n\n💻Uso: *!glowttp*\nℹ️Descripción: Escribe el texto de neón\n\n💻Uso: *!paperttp*\nℹ️Descripción: Escribe el texto sobre un papel.\n\n💻Uso: *!candlettp*\nℹ️Descripción: Escribe el texto sobre una taza de dulces.\n\n💻Uso: *!lovettp*\nℹ️Descripción: Escribe el texto sobre un corazón.\n\n💻Uso: *!flowerttp*\nℹ️Descripción: Escribe el texto sobre una taza de flores.\n\n💻Uso: *!glassttp*\nℹ️Descripción: Escribe el texto sobre un lienzo.\n\n💻Uso: *!coffeettp*\nℹ️Descripción: Escribe el texto sobre una taza de café.\n\n💻Uso: *!coffeecupttp*\nℹ️Descripción: Escribe el texto sobre una taza de café.\n\n💻Uso: *!candyttp*\nℹ️Descripción: Escribe un texto de dulces.\n\n💻Uso: *!sandttp*\nℹ️Descripción: Escribe el texto sobre arena.\n\n💻Uso: *!skyttp*\nℹ️Descripción: Escribe el texto sobre el cielo.\n\n💻Uso: *!snowttp*\nℹ️Descripción: Escribe el texto sobre la nieve.\n\n💻Uso: *!textttp*\nℹ️Descripción: Escribe el texto sobre el cielo.\n\n💻Uso: *!smokettp*\nℹ️Descripción: Escribe el texto sobre el humo.\n\n💻Uso: *!silverttp*\nℹ️Descripción: Escribe el texto sobre plata.\n\n');
-    }));
 }
