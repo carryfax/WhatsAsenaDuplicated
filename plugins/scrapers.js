@@ -44,7 +44,7 @@ const wiki = require('wikijs').default;
 var gis = require('g-i-s');
 
 
-if (config.WORKTYPE == 'public') {
+if (config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
 
@@ -298,7 +298,7 @@ if (config.WORKTYPE == 'public') {
 
     }));
 }
-else if (config.WORKTYPE == 'private') {
+else if (config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
 
