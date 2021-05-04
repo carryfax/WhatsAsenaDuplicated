@@ -129,7 +129,7 @@ const ENREP = "```¡Debes responder algún mensaje!```"
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy_2.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Nivel de lesbiana detectado!* 🏳️‍🌈\n*Resultado:* ${r_text[i]}` }
             )
@@ -255,7 +255,7 @@ const ENREP = "```¡Debes responder algún mensaje!```"
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy_2.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: `*Nivel de lesbiana detectado* 🏳️‍🌈\n*Resultado:* ${r_text[i]}` }
             )
