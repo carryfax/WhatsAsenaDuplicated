@@ -17,13 +17,13 @@
 */
 
 function successfullMessage(msg) {
-    return "✅ *DrkBot*:  ```" + msg + "```"
+    return "✅ *DrkBotLite*:  ```" + msg + "```"
 }
 function errorMessage(msg) {
-    return "🛑 *DrkBot*:  ```" + msg + "```"
+    return "🛑 *DrkBotLite*:  ```" + msg + "```"
 }
 function infoMessage(msg) {
-    return "⏺️ *DrkBot*:  ```" + msg + "```"
+    return "⏺️ *DrkBotLite*:  ```" + msg + "```"
 }
 
 
