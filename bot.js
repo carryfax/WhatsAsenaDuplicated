@@ -1,9 +1,9 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2021.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
+DrkBotLite - DarkBox
 */
 
 const fs = require("fs");
@@ -251,7 +251,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     , MessageType.text, {detectLinks: false});
                             } else {
                                 await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [DrkBot] --*' + 
-                                    '\n*¡DrkBot ha tenido un error!*'+
+                                    '\n*¡DrkBotLite ha tenido un error!*'+
                                     '\n_Este es tu número de registro del bot, aquí se reportarán todos los errores que tenga._' +
                                     '\n_Puedes escribir a nuestro grupo de *Soporte* https://chat.whatsapp.com/IeRNuoNY1IQJS8JE02duW8 para obtener ayuda._' +
                                     '\n_Este mensaje debería haber ido a su número (mensajes guardados)._\n\n' +
