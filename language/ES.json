@@ -73,9 +73,9 @@
             "MUST_TEXT": "```Responde cualquier mensaje```"
         },
         "heroku": {
-            "RESTART_DESC": "Reiniciar DrkBot",
+            "RESTART_DESC": "Reiniciar DrkBotLite",
             "RESTART_MSG": "```Reiniciando...```",
-            "SHUTDOWN_DESC": "Apagar DrkBot",
+            "SHUTDOWN_DESC": "Apagar DrkBotLite",
             "SHUTDOWN_MSG": "```Apagando ⛔```",
             "DYNO_DESC": "Verificar el uso de heroku dyno",
             "DYNO_TOTAL": "```Cuota total```",
@@ -214,7 +214,7 @@
             "INVALID_HEROKU": "*❌ ¡Tu información de Heroku es incorrecta!*",
             "UPDATED": "*✅ ¡La actualización fue exitosa!*",
             "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*",
-            "AFTER_UPDATE": "*¡Reiniciando DrkBot!*"
+            "AFTER_UPDATE": "*¡Reiniciando DrkBotLite!*"
         },
         "weather": {
             "WEATHER_DESC": "Trae el clima.",
@@ -400,7 +400,7 @@
             "SAVED": "Aquí están las notas que grabó: ",
             "SAVE_USAGE": "Registra el mensaje al que responde o la nota oficial.",
             "REPLY": "Por favor cite un mensaje o usar como !save <yournote>",
-            "SUCCESSFULLY_ADDED": "Tu nota ha sido guardada con éxito, puede acceder a sus notas escribiendo !notes",
+            "SUCCESSFULLY_ADDED": "",
             "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con el desarrollador del bot mediante t.me/Dark1522.",
             "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
