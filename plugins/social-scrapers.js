@@ -66,7 +66,7 @@ if (cn.WORKTYPE == 'private') {
         })
     });
 
-    Asena.addCommand({ pattern: 'dtiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
+    Asena.addCommand({ pattern: 'dtiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
 
         const userName = match[1]
 
@@ -86,7 +86,7 @@ if (cn.WORKTYPE == 'private') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Hecho por *DrkBot*',
+              caption: 'Hecho por *DrkBotLite*',
             })
           })
           .catch(
@@ -153,7 +153,7 @@ else if (cn.WORKTYPE == 'public') {
             })
 
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: 'Hecho por *DrkBot*',
+              caption: 'Hecho por *DrkBotLite*',
             })
           })
           .catch(

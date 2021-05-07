@@ -16,11 +16,11 @@ const Lang = Language.getString('deepai'); // Language Support
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'deepai', fromMe: false, deleteCommand: true, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
-        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *DEEPAI COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ *!colorai*\n  Colorea la foto que esté en blanco y negro.\n\n┠⊷️ ➡️ *!dreamai*\n  Aplica efecto de ensueño a la foto.\n\n┠⊷️ ➡️ *!toonai*\n  Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n┠⊷️ ➡️ *!nudity*\n  Detecta la probabilidad de que una imagen contenga desnudez y deba considerarse NSFW.\n\n┠⊷️ ➡️ *!ganstyle*\n  Coloca un filtro a la foto respondida.\n\n┠⊷️ ➡️ *!neuraltalkai*\n  Trata de explica lo que está pasando en la foto con Inteligencia Artificial (Modo BETA).\n\n┠⊷️ ➡️ *!textai <texto>*\n  Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n  Ejemplo: !textai hot\n  El resultado puedes responderlo con el comando (!trt en es) para traducirlo.\n\n⚠️ *Todas las herramientas funcionan con aprendizaje. Cuanto más las uses mejor funcionarán,```\n\n  *𝐃𝐫𝐤𝐁𝐨𝐭* tu BOT amigo 😉\n');
+    Asena.addCommand({pattern: 'deepai', fromMe: true, deleteCommand: true, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
+        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *DEEPAI COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ *!colorai*\n  Colorea la foto que esté en blanco y negro.\n\n┠⊷️ ➡️ *!dreamai*\n  Aplica efecto de ensueño a la foto.\n\n┠⊷️ ➡️ *!toonai*\n  Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n┠⊷️ ➡️ *!nudity*\n  Detecta la probabilidad de que una imagen contenga desnudez y deba considerarse NSFW.\n\n┠⊷️ ➡️ *!ganstyle*\n  Coloca un filtro a la foto respondida.\n\n┠⊷️ ➡️ *!neuraltalkai*\n  Trata de explica lo que está pasando en la foto con Inteligencia Artificial (Modo BETA).\n\n┠⊷️ ➡️ *!textai <texto>*\n  Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n  Ejemplo: !textai hot\n  El resultado puedes responderlo con el comando (!trt en es) para traducirlo.\n\n⚠️ *Todas las herramientas funcionan con aprendizaje. Cuanto más las uses mejor funcionarán,```\n\n  *𝐃𝐫𝐤𝐁𝐨𝐭𝐋𝐢𝐭𝐞* tu BOT amigo 😉\n');
     }));
 
-    Asena.addCommand({pattern: 'colorai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'colorai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Colorizando... 🎨',MessageType.text);
@@ -42,7 +42,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -50,7 +50,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-    Asena.addCommand({pattern: 'nudity', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'nudity', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Buscando partes desnudas... 🔞',MessageType.text);
@@ -72,7 +72,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -80,7 +80,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'waifuai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'waifuai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Mezclando... 🧩',MessageType.text);
@@ -102,7 +102,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -110,7 +110,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'superai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'superai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Mejorando... 🖌️',MessageType.text);
@@ -132,7 +132,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite'})
 
             });
 
@@ -140,7 +140,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
         var resp = await deepai.callStandardApi("sentiment-analysis", {
@@ -152,7 +152,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'dreamai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'dreamai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Noche estrellada... 🌃',MessageType.text);
@@ -174,7 +174,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -182,7 +182,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'neuraltalkai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'neuraltalkai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Leyendo... 🙇🏻',MessageType.text);
@@ -210,7 +210,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
         var resp = await deepai.callStandardApi("text2img", {
@@ -220,11 +220,11 @@ if (Config.WORKTYPE == 'private') {
 
         var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
     }));
 
-    Asena.addCommand({pattern: 'toonai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'toonai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Caricaturizando... 🌟',MessageType.text);
@@ -254,7 +254,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'textai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'textai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
         var resp = await deepai.callStandardApi("text-generator", {
@@ -266,7 +266,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
 
-    Asena.addCommand({pattern: 'ganstyle', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'ganstyle', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
         if (message.reply_message === false) return await message.sendMessage('```¡Necesito que respondas a una foto!```');
 
         var downloading = await message.client.sendMessage(message.jid,'Creando... ♻️',MessageType.text);
@@ -289,7 +289,7 @@ if (Config.WORKTYPE == 'private') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -300,7 +300,7 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'deepai', fromMe: false, deleteCommand: true, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
-        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *DEEPAI COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ *!colorai*\n  Colorea la foto que esté en blanco y negro.\n\n┠⊷️ ➡️ *!dreamai*\n  Aplica efecto de ensueño a la foto.\n\n┠⊷️ ➡️ *!toonai*\n  Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n┠⊷️ ➡️ *!nudity*\n  Detecta la probabilidad de que una imagen contenga desnudez y deba considerarse NSFW.\n\n┠⊷️ ➡️ *!ganstyle*\n  Coloca un filtro a la foto respondida.\n\n┠⊷️ ➡️ *!neuraltalkai*\n  Trata de explica lo que está pasando en la foto con Inteligencia Artificial (Modo BETA).\n\n┠⊷️ ➡️ *!textai <texto>*\n  Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n  Ejemplo: !textai hot\n  El resultado puedes responderlo con el comando (!trt en es) para traducirlo.\n\n⚠️ *Todas las herramientas funcionan con aprendizaje. Cuanto más las uses mejor funcionarán,```\n\n  *𝐃𝐫𝐤𝐁𝐨𝐭* tu BOT amigo 😉\n');
+        await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *DEEPAI COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ *!colorai*\n  Colorea la foto que esté en blanco y negro.\n\n┠⊷️ ➡️ *!dreamai*\n  Aplica efecto de ensueño a la foto.\n\n┠⊷️ ➡️ *!toonai*\n  Convierte la cara de la foto en un personaje de dibujos animados con Inteligencia Artificial.\n\n┠⊷️ ➡️ *!nudity*\n  Detecta la probabilidad de que una imagen contenga desnudez y deba considerarse NSFW.\n\n┠⊷️ ➡️ *!ganstyle*\n  Coloca un filtro a la foto respondida.\n\n┠⊷️ ➡️ *!neuraltalkai*\n  Trata de explica lo que está pasando en la foto con Inteligencia Artificial (Modo BETA).\n\n┠⊷️ ➡️ *!textai <texto>*\n  Crea una historia artificial para ti a partir de tu oración, por ahora solo en inglés.\n  Ejemplo: !textai hot\n  El resultado puedes responderlo con el comando (!trt en es) para traducirlo.\n\n⚠️ *Todas las herramientas funcionan con aprendizaje. Cuanto más las uses mejor funcionarán,```\n\n  *𝐃𝐫𝐤𝐁𝐨𝐭𝐋𝐢𝐭𝐞* tu BOT amigo 😉\n');
     }));
 
     Asena.addCommand({pattern: 'colorai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
@@ -325,7 +325,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -355,7 +355,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -385,7 +385,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -415,7 +415,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -457,7 +457,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 
@@ -503,7 +503,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
     }));
 
@@ -572,7 +572,7 @@ else if (Config.WORKTYPE == 'public') {
 
                 var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBot*'})
+                await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Hecho por *DrkBotLite*'})
 
             });
 

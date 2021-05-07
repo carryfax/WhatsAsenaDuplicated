@@ -16,11 +16,11 @@ const Lang = Language.getString('conventer');
 
 if (Config.WORKTYPE == 'private') {
     
-    Asena.addCommand({pattern: 'infotblend', fromMe: false}, (async (message, match) => {
-	    await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *TBLEND COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ !tblend dodge\n  Aplica un filtro de color rosa al video.\n\n┠⊷️ ➡️ !tblend multiply\n  Aplica un filtro de color verde al video.\n\n┠⊷️ ➡️ !tblend grainmerge\n  Aumenta los valores de contraste del video.\n\n┠⊷️ ➡️ !tblend and\n  Aplica efecto de rayo negro según la velocidad del video.\n\n┠⊷️ ➡️ !tblend or\n  Aplica un efecto de rayo blanco según la velocidad del video.\n\n┠⊷️ ➡️ !tblend burn\n  Aplica contraste verde al video.\n\n┠⊷️ ➡️ !tblend difference\n  Muestra las diferencias aplicando relieve verde al video.\n\n┠⊷️ ➡️ !tblend grainextract\n  Muestra las diferencias aplicando un relieve gris al video.\n\n┠⊷️ ➡️ !tblend divide\n  Demuestra las diferencias aplicando un relieve rosa al video.\n\n┠⊷️ ➡️ !tblend xor\n  Aplica tanto relieve verde como efecto relámpago al vídeo.\n\n┠⊷️ ➡️ !tblend hardmix\n  Mezcla los colores del video en un tono amarillo y rojo.\n\n┠⊷️ ➡️ !tblend negation\n  Convierte la dinámica del video en rosa.\n\n*𝐃𝐫𝐤𝐁𝐨𝐭* tu BOT amigo 😉');
+    Asena.addCommand({pattern: 'infotblend', fromMe: true}, (async (message, match) => {
+	    await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *TBLEND COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ !tblend dodge\n  Aplica un filtro de color rosa al video.\n\n┠⊷️ ➡️ !tblend multiply\n  Aplica un filtro de color verde al video.\n\n┠⊷️ ➡️ !tblend grainmerge\n  Aumenta los valores de contraste del video.\n\n┠⊷️ ➡️ !tblend and\n  Aplica efecto de rayo negro según la velocidad del video.\n\n┠⊷️ ➡️ !tblend or\n  Aplica un efecto de rayo blanco según la velocidad del video.\n\n┠⊷️ ➡️ !tblend burn\n  Aplica contraste verde al video.\n\n┠⊷️ ➡️ !tblend difference\n  Muestra las diferencias aplicando relieve verde al video.\n\n┠⊷️ ➡️ !tblend grainextract\n  Muestra las diferencias aplicando un relieve gris al video.\n\n┠⊷️ ➡️ !tblend divide\n  Demuestra las diferencias aplicando un relieve rosa al video.\n\n┠⊷️ ➡️ !tblend xor\n  Aplica tanto relieve verde como efecto relámpago al vídeo.\n\n┠⊷️ ➡️ !tblend hardmix\n  Mezcla los colores del video en un tono amarillo y rojo.\n\n┠⊷️ ➡️ !tblend negation\n  Convierte la dinámica del video en rosa.\n\n*𝐃𝐫𝐤𝐁𝐨𝐭𝐋𝐢𝐭𝐞* tu BOT amigo 😉');
 	}));
 
-    Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: false, desc: Lang.T_DESC}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: true, desc: Lang.T_DESC}, (async (message, match) => {    
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 
@@ -42,7 +42,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -62,7 +62,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -82,7 +82,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -102,7 +102,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -122,7 +122,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -142,7 +142,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -162,7 +162,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -182,7 +182,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -202,7 +202,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -222,7 +222,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -242,7 +242,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -262,7 +262,7 @@ if (Config.WORKTYPE == 'private') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 
@@ -275,7 +275,7 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
     
     Asena.addCommand({pattern: 'infotblend', fromMe: false}, (async (message, match) => {
-	    await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *TBLEND COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ !tblend dodge\n  Aplica un filtro de color rosa al video.\n\n┠⊷️ ➡️ !tblend multiply\n  Aplica un filtro de color verde al video.\n\n┠⊷️ ➡️ !tblend grainmerge\n  Aumenta los valores de contraste del video.\n\n┠⊷️ ➡️ !tblend and\n  Aplica efecto de rayo negro según la velocidad del video.\n\n┠⊷️ ➡️ !tblend or\n  Aplica un efecto de rayo blanco según la velocidad del video.\n\n┠⊷️ ➡️ !tblend burn\n  Aplica contraste verde al video.\n\n┠⊷️ ➡️ !tblend difference\n  Muestra las diferencias aplicando relieve verde al video.\n\n┠⊷️ ➡️ !tblend grainextract\n  Muestra las diferencias aplicando un relieve gris al video.\n\n┠⊷️ ➡️ !tblend divide\n  Demuestra las diferencias aplicando un relieve rosa al video.\n\n┠⊷️ ➡️ !tblend xor\n  Aplica tanto relieve verde como efecto relámpago al vídeo.\n\n┠⊷️ ➡️ !tblend hardmix\n  Mezcla los colores del video en un tono amarillo y rojo.\n\n┠⊷️ ➡️ !tblend negation\n  Convierte la dinámica del video en rosa.\n\n*𝐃𝐫𝐤𝐁𝐨𝐭* tu BOT amigo 😉');
+	    await message.sendMessage('┏━━━━━━━━━━━━━━━━━━━\n┃〘 *TBLEND COMANDOS* 〙\n┗━━━━━━━━━━━━━━━━━━━\n┠⊷️ ➡️ !tblend dodge\n  Aplica un filtro de color rosa al video.\n\n┠⊷️ ➡️ !tblend multiply\n  Aplica un filtro de color verde al video.\n\n┠⊷️ ➡️ !tblend grainmerge\n  Aumenta los valores de contraste del video.\n\n┠⊷️ ➡️ !tblend and\n  Aplica efecto de rayo negro según la velocidad del video.\n\n┠⊷️ ➡️ !tblend or\n  Aplica un efecto de rayo blanco según la velocidad del video.\n\n┠⊷️ ➡️ !tblend burn\n  Aplica contraste verde al video.\n\n┠⊷️ ➡️ !tblend difference\n  Muestra las diferencias aplicando relieve verde al video.\n\n┠⊷️ ➡️ !tblend grainextract\n  Muestra las diferencias aplicando un relieve gris al video.\n\n┠⊷️ ➡️ !tblend divide\n  Demuestra las diferencias aplicando un relieve rosa al video.\n\n┠⊷️ ➡️ !tblend xor\n  Aplica tanto relieve verde como efecto relámpago al vídeo.\n\n┠⊷️ ➡️ !tblend hardmix\n  Mezcla los colores del video en un tono amarillo y rojo.\n\n┠⊷️ ➡️ !tblend negation\n  Convierte la dinámica del video en rosa.\n\n*𝐃𝐫𝐤𝐁𝐨𝐭𝐋𝐢𝐭𝐞* tu BOT amigo 😉');
 	}));
 
     Asena.addCommand({pattern: 'tblend ?(.*)', fromMe: false, desc: Lang.T_DESC}, (async (message, match) => {    
@@ -300,7 +300,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -320,7 +320,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -340,7 +340,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -360,7 +360,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -380,7 +380,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -400,7 +400,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -420,7 +420,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -440,7 +440,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -460,7 +460,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -480,7 +480,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -500,7 +500,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
@@ -520,7 +520,7 @@ else if (Config.WORKTYPE == 'public') {
                 .format('mp4')
                 .save('output.mp4')
                 .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBot*'});
+                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Hecho por *DrkBotLite*'});
                 });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 
