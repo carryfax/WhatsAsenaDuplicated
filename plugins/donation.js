@@ -27,7 +27,7 @@ const fs = require('fs');
   
         }));
 
-    Asena.addCommand({pattern: 'infohentai', fromMe: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'apoyo', fromMe: true}, (async (message, match) => {
       await message.sendMessage('Hola como estas, veo que quieres apoyarme.\nLa forma en la que podrias ayudarme es convirtiendote en mi referido de una aplicación llamada TikTok\nLo unico que tendrias que hacer es descargar la aplicación desde Android(Play Store) Iphone(App Store) y una vez descargada registrarte y poner mi codigo de referido, eso seria todo..\nMi codigo de referido es el siguiente y muchas gracias.');
       await new Promise(r => setTimeout(r, 1650));
       await message.sendMessage('GBEGCV6H8LYTG');
