@@ -15,7 +15,7 @@ const fs = require('fs');
 if (Config.WORKTYPE == 'private') {
 
 	Asena.addCommand({pattern: 'infohentai', fromMe: true}, (async (message, match) => {
-		await message.sendMessage('🔞 *TODO HENTAI* 🔞\n\n➡️ !hentai\n➡️ !panties\n➡️ !masturb\n➡️ !pussy');
+		await message.sendMessage('🔞 *TODO HENTAI* 🔞\n\n➡️ /hentai\n➡️ /panties\n➡️ /masturb\n➡️ /pussy');
 	}));
 
 	Asena.addCommand({ pattern: 'henta', fromMe: true }, (async (message, match) => {
@@ -42,7 +42,7 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
 	Asena.addCommand({pattern: 'infohentai', fromMe: false}, (async (message, match) => {
-		await message.sendMessage('🔞 *TODO HENTAI* 🔞\n\n➡️ !hentai\n➡️ !panties\n➡️ !masturb\n➡️ !pussy');
+		await message.sendMessage('🔞 *TODO HENTAI* 🔞\n\n➡️ /hentai\n➡️ /panties\n➡️ /masturb\n➡️ /pussy');
 	}));
 
 	Asena.addCommand({ pattern: 'hentai', fromMe: false }, (async (message, match) => {
